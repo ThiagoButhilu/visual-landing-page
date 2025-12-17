@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Neonderthaw&family=Quicksand:wght@300..700&display=swap');
+
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F8F6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Logo escrita */
+.header-font {
+    font-family: 'Lora', serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.font-serif {
+  font-family: 'Lora', serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* CORES DE TEXTO */
+.font-color,
+.font-color * {
+    color: #2F5E4E; /* verde escuro elegante */
 }
 
-.App-link {
-  color: #61dafb;
+.clear-font-color {
+    color: #6F9486; /* texto secundário suave */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* BACKGROUNDS */
+.main-bg-color {
+    background-color: #CFE6DA; /* verde folha bem claro */
+}
+
+.secondary-bg-color {
+    background-color: #9FCDB8; /* verde médio suave */
+}
+
+.tertiary-bg-color {
+    background-color: #5F9C83; /* verde destaque */
+}
+
+.forty-bg-color {
+    background-color: #2F5E4E; /* verde escuro (header / sections) */
+}
+
+.fifty-bg-color {
+    background-color: #163C2E; /* verde profundo (footer) */
 }
