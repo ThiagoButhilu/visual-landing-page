@@ -19,6 +19,10 @@ body {
   font-family: 'Lora', serif;
 }
 
+.font-location {
+    color: #CFE6DA;
+}
+
 /* CORES DE TEXTO */
 .font-color,
 .font-color * {

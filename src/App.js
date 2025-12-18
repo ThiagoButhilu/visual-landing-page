@@ -16,8 +16,8 @@ function App() {
       <CarroselBanner />
       <Intro />
       <Services />
-      <FeedBack />
       <Location />
+       <FeedBack />
       <Footer />
     </div>
   );

@@ -1,8 +1,12 @@
 import imgHeader from '../assets/images/ChatGPT Image 11 de dez. de 2025, 21_45_08.png';
+import { motion } from 'framer-motion';
 
 function Header() {
     return (
-        <header className="
+        
+        <motion.header initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }} className="
             fixed top-0 w-full z-50
             bg-white/30 backdrop-blur-md
             border-b border-white/40
@@ -19,28 +23,34 @@ function Header() {
                 <div>
                     <ul className="flex gap-6 text-sm font-medium">
                         <li>
-                            <a
+                            <motion.a
+                            whileHover={{ y: -1 }}
+                            transition={{ duration: 0.2 }}
                                 href="#inicio"
                                 className="font-color relative after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-current after:transition-all hover:after:w-full"
                             >
                                 Início
-                            </a>
+                            </motion.a>
                         </li>
                         <li>
-                            <a
+                            <motion.a
+                            whileHover={{ y: -1 }}
+                            transition={{ duration: 0.2 }}
                                 href="#servicos"
                                 className="font-color relative after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-current after:transition-all hover:after:w-full"
                             >
                                 Serviços
-                            </a>
+                            </motion.a>
                         </li>
                         <li>
-                            <a
+                            <motion.a
+                            whileHover={{ y: -1 }}
+                            transition={{ duration: 0.2 }}
                                 href="#depoimentos"
                                 className="font-color relative after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-current after:transition-all hover:after:w-full"
                             >
                                 Depoimentos
-                            </a>
+                            </motion.a>
                         </li>
                     </ul>
                 </div>
@@ -56,7 +66,11 @@ function Header() {
 
                 {/* CTA DIREITO */}
                 <div className="flex justify-end">
-                    <a
+                    <motion.a
+                   
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.97 }}
+                    transition={{ type: "spring", stiffness: 300 }}
                         href="#contato"
                         className="
                             px-5 py-2
@@ -65,15 +79,15 @@ function Header() {
                             text-white
                             text-sm font-medium
                             hover:opacity-90
-                            transition
+                            tran    sition
                         "
                     >
                         Fale conosco
-                    </a>
+                    </motion.a>
                 </div>
 
             </nav>
-        </header>
+        </motion.header>
     );
 }
 

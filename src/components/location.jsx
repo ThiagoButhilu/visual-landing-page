@@ -1,103 +1,173 @@
 import Store from '../assets/images/cuidados-basicos-com-a-otica.jpg';
+import { motion } from 'framer-motion';
 
 function Location() {
-  return (
-    <section className="py-20 px-8 main-bg-color">
 
-      <div className="max-w-7xl mx-auto font-color">
+  const title = {
+    hidden: { opacity: 0, y: 20 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
+  const left = {
+    hidden: { opacity: 0, x: -40 },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
+  const rightContainer = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15
+      }
+    }
+  };
+
+  const rightItem = {
+    hidden: { opacity: 0, x: 30 },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "easeOut" }
+    }
+  };
+
+  const image = {
+    hidden: { opacity: 0, scale: 0.96 },
+    show: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.6, ease: "easeOut", delay: 0.2 }
+    }
+  };
+
+  return (
+    <motion.section
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25, margin: "-150px 0px" }}
+      className="py-20 px-8 forty-bg-color"
+    >
+
+      <div className="max-w-7xl mx-auto">
 
         {/* TÍTULO */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl font-semibold mb-4">
+        <motion.div
+          variants={title}
+          className="text-center max-w-2xl mx-auto mb-16"
+        >
+          <h2 className="text-3xl font-location font-semibold mb-4">
             Venha nos visitar
           </h2>
-          <p className="clear-font-color">
+          <p className="text-white/80 leading-relaxed">
             Estamos prontos para receber você com conforto, atenção e cuidado
             em um ambiente acolhedor.
           </p>
-        </div>
+        </motion.div>
 
         {/* CONTEÚDO */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
           {/* MAPA */}
-          <div className="w-full h-[380px] rounded-2xl overflow-hidden shadow-lg">
+          <motion.div
+            variants={left}
+            className="w-full h-[380px] rounded-2xl overflow-hidden shadow-lg"
+          >
             <iframe
               src="https://www.google.com/maps?q=Avenida%20Paulista%2C%201000%20-%20São%20Paulo&output=embed"
               loading="lazy"
               className="w-full h-full border-0"
               title="Localização da ótica"
             />
-          </div>
+          </motion.div>
 
           {/* INFORMAÇÕES */}
-          <div className="flex flex-col gap-6">
+          <motion.div
+            variants={rightContainer}
+            className="flex flex-col text-center gap-6"
+          >
 
-            <div>
-              <h3 className="text-xl font-medium mb-2">
+            <motion.div variants={rightItem}>
+              <h3 className="text-xl font-location font-medium mb-2">
                 Endereço
               </h3>
-              <p className="clear-font-color">
+              <p className="text-white/80 leading-relaxed">
                 Avenida Paulista, 1000<br />
                 Bela Vista — São Paulo, SP
               </p>
-            </div>
+            </motion.div>
 
-            <div>
-              <h3 className="text-xl font-medium mb-2">
+            <motion.div variants={rightItem}>
+              <h3 className="text-xl font-location font-medium mb-2">
                 Horário de funcionamento
               </h3>
-              <p className="clear-font-color">
+              <p className="text-white/80 leading-relaxed">
                 Segunda a Sexta: 9h às 18h<br />
                 Sábado: 9h às 13h<br />
                 Domingo: fechado
               </p>
-            </div>
+            </motion.div>
 
-            <div>
-              <h3 className="text-xl font-medium mb-2">
+            <motion.div variants={rightItem}>
+              <h3 className="text-xl font-location font-medium mb-2">
                 Contato
               </h3>
-              <p className="clear-font-color">
+              <p className="text-white/80 leading-relaxed">
                 (11) 99999-9999<br />
                 contato@vistaclara.com.br
               </p>
-            </div>
+            </motion.div>
 
             {/* CTA */}
-            <div className="pt-4">
-              <a
+            <motion.div variants={rightItem} className="pt-4">
+              <motion.a
                 href="#contato"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ type: "spring", stiffness: 300 }}
                 className="
                   inline-block
-                  px-8 py-3
+                  bg-white/30
+                  backdrop-blur-md
+                  px-4 py-2
                   rounded-full
-                  tertiary-bg-color
-                  text-white
-                  text-sm font-medium
-                  hover:opacity-90
-                  transition
+                  text-sm
+                  text-emerald-100
+                  font-semibold
+                  border border-white/40
+                  shadow-sm
                 "
               >
                 Fale conosco
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
 
-          </div>
+          </motion.div>
 
         </div>
 
         {/* IMAGEM DA LOJA */}
-        <div className="mt-20 flex justify-center">
+        <motion.div
+          variants={image}
+          className="mt-20 flex justify-center"
+        >
           <img
             src={Store}
             alt="Interior da loja Vista Clara"
             className="w-full max-w-4xl rounded-2xl shadow-lg object-cover"
           />
-        </div>
+        </motion.div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }
 
