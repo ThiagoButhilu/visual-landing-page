@@ -6,67 +6,80 @@ import { motion } from 'framer-motion';
 function Intro() {
 
   const left = {
-    hidden: { opacity: 0, x: -40 },
+    hidden: { opacity: 0, x: -30 },
     show: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
+      transition: { duration: 0.5, ease: "easeOut" }
     }
   };
 
   const right = {
-    hidden: { opacity: 0, x: 40 },
+    hidden: { opacity: 0, x: 30 },
     show: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
+      transition: { duration: 0.5, ease: "easeOut" }
     }
   };
 
   const center = {
-    hidden: { opacity: 0, scale: 0.96 },
+    hidden: { opacity: 0, scale: 0.97 },
     show: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.6, ease: "easeOut", delay: 0.15 }
+      transition: { duration: 0.5, ease: "easeOut", delay: 0.1 }
     }
   };
 
   return (
     <motion.section
-        initial="hidden"
-        whileInView="show"
-        viewport={{
-            once: false,
-            margin: "-200px 0px",
-            amount: 0.2
-        }}
-      className="forty-bg-color grid grid-cols-3 gap-4 px-10 py-16 mx-auto w-full"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25, margin: "-120px 0px" }}
+      className="
+        forty-bg-color
+        grid
+        grid-cols-1
+        md:grid-cols-3
+        gap-10 md:gap-4
+        px-6 md:px-10
+        py-16
+        w-full
+      "
     >
 
       {/* COLUNA ESQUERDA */}
       <motion.div
         variants={left}
-        className="flex flex-col justify-between h-full items-center"
+        className="flex flex-col gap-10 md:justify-between items-center text-center md:text-left"
       >
 
-        <div className='w-80 clear-font-color'>
-          <span className="text-sm uppercase tracking-widest opacity-70">
+        <div className="w-full md:w-80 clear-font-color">
+          <span className="text-xs md:text-sm uppercase tracking-widest opacity-70">
             Nossa missão
           </span>
 
-          <h2 className='font-bold mb-4 mt-2 text-3xl'>
+          <h2 className="font-bold mb-4 mt-2 text-2xl md:text-3xl">
             Cuidar da sua visão é o nosso foco
           </h2>
 
-          <p className="mb-6 opacity-80">
+          <p className="mb-6 opacity-80 text-sm md:text-base">
             Na nossa ótica, acreditamos que enxergar bem é parte do bem-estar.
             Oferecemos óculos e lentes pensados para o seu conforto, estilo e saúde visual.
           </p>
 
           <a
             href="#servicos"
-            className="inline-block border border-current px-6 py-2 rounded-full text-sm hover:bg-white/10 transition"
+            className="
+              inline-block
+              border border-current
+              px-6 py-2
+              rounded-full
+              text-sm
+              hover:bg-white/10
+              transition
+            "
           >
             Conhecer serviços
           </a>
@@ -74,7 +87,11 @@ function Intro() {
 
         <div className="text-center">
           <img
-            className='rounded-bl-4xl rounded-tr-4xl w-56 h-56 object-cover shadow-xl'
+            className="
+              rounded-bl-4xl rounded-tr-4xl
+              w-48 h-48 md:w-56 md:h-56
+              object-cover shadow-xl
+            "
             src={firstColumn}
             alt="Armações modernas"
           />
@@ -88,15 +105,31 @@ function Intro() {
       {/* COLUNA CENTRAL */}
       <motion.div
         variants={center}
-        className="flex items-center justify-center relative"
+        className="flex items-center justify-center relative order-first md:order-none"
       >
         <img
-          className='w-124 h-full object-cover rounded-xl'
+          className="
+            w-full
+            max-w-sm md:max-w-none
+            h-[320px] md:h-full
+            object-cover
+            rounded-xl
+          "
           src={middleImg}
           alt="Modelo usando óculos"
         />
 
-        <div className="absolute bottom-6 right-6 bg-white/30 backdrop-blur-md px-4 py-2 rounded-full text-sm text-emerald-100 font-semibold border border-white/40 shadow-sm">
+        <div className="
+          absolute bottom-4 right-4
+          bg-white/30 backdrop-blur-md
+          px-4 py-2
+          rounded-full
+          text-xs md:text-sm
+          text-emerald-100
+          font-semibold
+          border border-white/40
+          shadow-sm
+        ">
           Estilo & conforto
         </div>
       </motion.div>
@@ -104,12 +137,16 @@ function Intro() {
       {/* COLUNA DIREITA */}
       <motion.div
         variants={right}
-        className="flex flex-col justify-between h-full items-center"
+        className="flex flex-col gap-10 md:justify-between items-center text-center md:text-left"
       >
 
         <div className="text-center">
           <img
-            className='rounded-br-4xl rounded-tl-4xl w-56 h-56 object-cover shadow-xl'
+            className="
+              rounded-br-4xl rounded-tl-4xl
+              w-48 h-48 md:w-56 md:h-56
+              object-cover shadow-xl
+            "
             src={secondColumn}
             alt="Óculos em destaque"
           />
@@ -118,16 +155,16 @@ function Intro() {
           </p>
         </div>
 
-        <div className='w-80 clear-font-color'>
-          <span className="text-sm uppercase tracking-widest opacity-70">
+        <div className="w-full md:w-80 clear-font-color">
+          <span className="text-xs md:text-sm uppercase tracking-widest opacity-70">
             Nossa coleção
           </span>
 
-          <h2 className='font-bold mb-4 mt-2 text-3xl'>
+          <h2 className="font-bold mb-4 mt-2 text-2xl md:text-3xl">
             Óculos que combinam com você
           </h2>
 
-          <p className="opacity-80">
+          <p className="opacity-80 text-sm md:text-base">
             Trabalhamos com armações modernas, leves e funcionais,
             sempre priorizando qualidade e atendimento atencioso.
           </p>

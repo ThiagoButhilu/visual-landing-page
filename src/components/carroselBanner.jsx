@@ -4,20 +4,20 @@ import { motion } from 'framer-motion';
 function CarroselBanner() {
 
   const title = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 16 },
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
+      transition: { duration: 0.5, ease: "easeOut" }
     }
   };
 
   const subtitle = {
-    hidden: { opacity: 0, y: 15 },
+    hidden: { opacity: 0, y: 12 },
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut", delay: 0.15 }
+      transition: { duration: 0.5, ease: "easeOut", delay: 0.12 }
     }
   };
 
@@ -26,41 +26,59 @@ function CarroselBanner() {
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut", delay: 0.3 }
+      transition: { duration: 0.5, ease: "easeOut", delay: 0.25 }
     }
   };
 
   return (
-    <motion.div
+    <motion.section
       initial="hidden"
       animate="show"
-      className="relative w-full h-full main-bg-color overflow-hidden"
+      className="
+        relative
+        w-full
+        min-h-[90vh]
+        md:min-h-screen
+        main-bg-color
+        overflow-hidden
+      "
     >
 
-      {/* imagem */}
+      {/* IMAGEM */}
       <img
         src={banner}
         alt="Vista Clara"
-        className="w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
       />
 
-      {/* overlay */}
+      {/* OVERLAY */}
       <div className="absolute inset-0 bg-black/30"></div>
 
-      {/* conteúdo */}
+      {/* CONTEÚDO */}
       <div className="
-        absolute inset-0
+        relative z-10
+        h-full
         flex flex-col
         justify-center
-        pl-24
+        items-center md:items-start
+         md:px-24
+        py-74 md:py-84
         max-w-2xl
         space-y-4
+        text-center md:text-left
       ">
 
         {/* TÍTULO */}
         <motion.h1
           variants={title}
-          className="text-6xl font-semibold tracking-wide font-serif text-[#F4F8F6]"
+          className="
+            text-4xl
+            md:text-6xl
+            font-semibold
+            tracking-wide
+            font-serif
+            text-[#F4F8F6]
+          "
         >
           Vista Clara
         </motion.h1>
@@ -68,7 +86,11 @@ function CarroselBanner() {
         {/* SUBTÍTULO */}
         <motion.h2
           variants={subtitle}
-          className="text-3xl text-[#EEF5F2]"
+          className="
+            text-xl
+            md:text-3xl
+            text-[#EEF5F2]
+          "
         >
           Ótica & cuidado visual
         </motion.h2>
@@ -81,8 +103,9 @@ function CarroselBanner() {
           whileTap={{ scale: 0.97 }}
           className="
             mt-6
-            w-fit
-            px-8 py-3
+            mx-auto md:mx-0
+            px-7 md:px-8
+            py-3
             rounded-full
             bg-white
             text-[#2F5E4E]
@@ -97,7 +120,7 @@ function CarroselBanner() {
 
       </div>
 
-    </motion.div>
+    </motion.section>
   );
 }
 

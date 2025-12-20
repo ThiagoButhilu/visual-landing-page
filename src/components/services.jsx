@@ -7,34 +7,34 @@ function Services() {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
+        staggerChildren: 0.12,
       },
     },
   };
 
   const item = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 16 },
     show: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.45,
         ease: "easeOut",
       },
     },
   };
 
   return (
-    <section className="py-20 px-8 main-bg-color">
+    <section className="py-16 md:py-20 px-6 md:px-8 main-bg-color">
 
       <div className="max-w-7xl mx-auto font-color">
 
         {/* TÍTULO */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl font-semibold mb-4">
+        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4">
             Cuidados Visuais Completos
           </h2>
-          <p className="clear-font-color leading-relaxed">
+          <p className="text-sm md:text-base clear-font-color leading-relaxed">
             Oferecemos uma ampla gama de serviços para cuidar da sua saúde visual.
             Desde exames completos até a escolha personalizada de armações e lentes.
           </p>
@@ -45,12 +45,19 @@ function Services() {
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+          viewport={{ once: true, amount: 0.2 }}
+          className="
+            grid
+            grid-cols-1
+            md:grid-cols-2
+            gap-6 md:gap-8
+            max-w-4xl
+            mx-auto
+          "
         >
 
-          <motion.div variants={item} className="p-6 rounded-2xl shadow-md secondary-bg-color">
-            <h3 className="text-xl font-medium mb-2">
+          <motion.div variants={item} className="p-6 md:p-7 rounded-2xl shadow-md secondary-bg-color">
+            <h3 className="text-lg md:text-xl font-medium mb-2">
               Exames Completos
             </h3>
             <p className="text-sm clear-font-color">
@@ -59,8 +66,8 @@ function Services() {
             </p>
           </motion.div>
 
-          <motion.div variants={item} className="p-6 rounded-2xl shadow-md secondary-bg-color">
-            <h3 className="text-xl font-medium mb-2">
+          <motion.div variants={item} className="p-6 md:p-7 rounded-2xl shadow-md secondary-bg-color">
+            <h3 className="text-lg md:text-xl font-medium mb-2">
               Armações Personalizadas
             </h3>
             <p className="text-sm clear-font-color">
@@ -69,8 +76,8 @@ function Services() {
             </p>
           </motion.div>
 
-          <motion.div variants={item} className="p-6 rounded-2xl shadow-md secondary-bg-color">
-            <h3 className="text-xl font-medium mb-2">
+          <motion.div variants={item} className="p-6 md:p-7 rounded-2xl shadow-md secondary-bg-color">
+            <h3 className="text-lg md:text-xl font-medium mb-2">
               Lentes de Alta Qualidade
             </h3>
             <p className="text-sm clear-font-color">
@@ -79,8 +86,8 @@ function Services() {
             </p>
           </motion.div>
 
-          <motion.div variants={item} className="p-6 rounded-2xl shadow-md secondary-bg-color">
-            <h3 className="text-xl font-medium mb-2">
+          <motion.div variants={item} className="p-6 md:p-7 rounded-2xl shadow-md secondary-bg-color">
+            <h3 className="text-lg md:text-xl font-medium mb-2">
               Ajustes e Manutenção
             </h3>
             <p className="text-sm clear-font-color">
