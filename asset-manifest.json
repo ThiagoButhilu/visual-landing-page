@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/visual-landing-page/static/css/main.61d94e7e.css",
+    "main.css": "/visual-landing-page/static/css/main.da7d7b6c.css",
     "main.js": "/visual-landing-page/static/js/main.fd80f3cf.js",
     "static/js/453.094c4831.chunk.js": "/visual-landing-page/static/js/453.094c4831.chunk.js",
     "static/media/ChatGPT Image 11 de dez. de 2025, 21_45_08.png": "/visual-landing-page/static/media/ChatGPT Image 11 de dez. de 2025, 21_45_08.0767f9c4ee3aec029ee2.png",
@@ -10,12 +10,12 @@
     "static/media/column2.jpg": "/visual-landing-page/static/media/column2.c833c0d67b134d7439ae.jpg",
     "static/media/colum1.jpg": "/visual-landing-page/static/media/colum1.b26420bbdac815c80032.jpg",
     "index.html": "/visual-landing-page/index.html",
-    "main.61d94e7e.css.map": "/visual-landing-page/static/css/main.61d94e7e.css.map",
+    "main.da7d7b6c.css.map": "/visual-landing-page/static/css/main.da7d7b6c.css.map",
     "main.fd80f3cf.js.map": "/visual-landing-page/static/js/main.fd80f3cf.js.map",
     "453.094c4831.chunk.js.map": "/visual-landing-page/static/js/453.094c4831.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.61d94e7e.css",
+    "static/css/main.da7d7b6c.css",
     "static/js/main.fd80f3cf.js"
   ]
 }
