@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/visual-landing-page/static/css/main.da7d7b6c.css",
-    "main.js": "/visual-landing-page/static/js/main.fd80f3cf.js",
+    "main.js": "/visual-landing-page/static/js/main.bf9dede1.js",
     "static/js/453.094c4831.chunk.js": "/visual-landing-page/static/js/453.094c4831.chunk.js",
     "static/media/ChatGPT Image 11 de dez. de 2025, 21_45_08.png": "/visual-landing-page/static/media/ChatGPT Image 11 de dez. de 2025, 21_45_08.0767f9c4ee3aec029ee2.png",
     "static/media/daniil-zameshaev-zu8wQicxbDs-unsplash.jpg": "/visual-landing-page/static/media/daniil-zameshaev-zu8wQicxbDs-unsplash.f92591088606b7bf0e8e.jpg",
@@ -11,11 +11,11 @@
     "static/media/colum1.jpg": "/visual-landing-page/static/media/colum1.b26420bbdac815c80032.jpg",
     "index.html": "/visual-landing-page/index.html",
     "main.da7d7b6c.css.map": "/visual-landing-page/static/css/main.da7d7b6c.css.map",
-    "main.fd80f3cf.js.map": "/visual-landing-page/static/js/main.fd80f3cf.js.map",
+    "main.bf9dede1.js.map": "/visual-landing-page/static/js/main.bf9dede1.js.map",
     "453.094c4831.chunk.js.map": "/visual-landing-page/static/js/453.094c4831.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.da7d7b6c.css",
-    "static/js/main.fd80f3cf.js"
+    "static/js/main.bf9dede1.js"
   ]
 }
