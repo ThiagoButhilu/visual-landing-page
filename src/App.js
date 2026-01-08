@@ -1,6 +1,5 @@
 
 import './App.css';
-import './output.css';
 import Header from './components/header'
 import CarroselBanner from './components/carroselBanner';
 import Intro from './components/intro';

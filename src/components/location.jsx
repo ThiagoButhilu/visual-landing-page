@@ -53,7 +53,7 @@ function Location() {
     <motion.section
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.2, margin: "-120px 0px" }}
+      viewport={{ once: false, amount: 0.2, margin: "-120px 0px" }}
       className="py-16 md:py-20 px-6 md:px-8 forty-bg-color"
     >
 

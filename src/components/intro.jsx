@@ -36,7 +36,7 @@ function Intro() {
     <motion.section
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.25, margin: "-120px 0px" }}
+      viewport={{ once: false, amount: 0.25, margin: "-120px 0px" }}
       className="
         forty-bg-color
         grid
