@@ -15,10 +15,11 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "/visual-landing-page",
+  "homepage": "https://ThiagoButhilu.github.io/visual-landing-page",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css",
+    "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
